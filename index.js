@@ -10,12 +10,14 @@ module.exports = class extends mofron.class.Component {
      * initialize component
      * 
      * @param (key-value) component config
+     * @short data
      * @type private
      */
     constructor (prm) {
         try {
             super();
             this.name("Chart");
+	    this.shortForm("data");
 	    /* init config */
 	    this.confmng().add("data", { type: "object", list: true });
 	    /* set config */
@@ -31,8 +33,8 @@ module.exports = class extends mofron.class.Component {
     /**
      * chart data setter/getter
      * 
-     * @param (array) chart data [{ label: string, values: mixed  }, ..]
-     *                 undefined: call as getter
+     * @param (key-value) chart data  { key : values(mixed) }
+     *                    undefined: call as getter
      * @return (mixed) object: chart data
      *                 null: not set
      * @type parameter

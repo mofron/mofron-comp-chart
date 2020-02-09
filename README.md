@@ -15,6 +15,6 @@ npm install mofron mofron-comp-epoch
 
 | Short<br>Form | Parameter Name | Type | Description |
 |:-------------:|:---------------|:-----|:------------|
-| | data | array | chart data [{ label: string, values: mixed  }, ..] |
+| ◯  | data | key-value | chart data  { key : values(mixed) } |
 | | | | undefined: call as getter |
 
